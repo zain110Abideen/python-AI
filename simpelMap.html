@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+           #map {
+            height: 400px;
+            width: 50%;
+            border: 1px solid black;
+            margin: 10px;
+
+           }
+
+           #sig {
+            width: 50%;
+            border: 1px solid black;
+            padding: 15px;
+            margin: 10px;
+           }
+        </style>
+      </head>
+      <body>
+        <div id="map"></div>
+        <div id="sig">
+          <h4>Zain-ul-Abideen Maps</h4>
+          <p>Powered by 1ten Development Team</p>
+          <a href="https://1tenhost.com/" target="_blank"><button type="button" class="btn btn-success">Visit Our Side</button></a>
+        </div>
+        <script>
+          function initMap() {
+            var uluru = {lat: 24.795129, lng: 67.049817};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 12,
+              center: uluru
+              
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map,
+              title: 'zain'
+            });
+          }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrQS1-U09_8Mm6TpZM8oQsDFzddmvp8po&callback=initMap">
+        </script>
+      </body>
+    </html>
